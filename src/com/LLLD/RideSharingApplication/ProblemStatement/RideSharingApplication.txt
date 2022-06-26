@@ -1,0 +1,46 @@
+Design a Ride sharing Application.
+
+Driver can offer rides (Origin,Destination,No of Seats).
+Rider can request rides (Origin,Destination,No of Seats).
+
+Ride Amount calculation :
+
+1. When the rides close,show the amount charged to the rider.
+2. Ride Amount if No of seats >=2 : No of Kilometers * No of Seats * 0.75 * amount charged per KM.
+3. Ride Amount if No of seats =1 : No of Kilometers * amount charged per KM.
+
+The program should take as input two or more drivers and a set of riders requesting rides. Multiple rides can happen simultaneously.
+
+Assumptions :
+
+1. Assume Amount charged per KM :20.
+2. No of Kilometers=destination - origin.
+3. All values are integer
+
+test case 1 :
+
+Rider  :R1
+I/P : 50 60 1
+O/P : 10 * 20 = 200 Rs
+
+
+test case 2 :
+
+Rider  :R2
+I/P : 50 60 2
+O/P : 10*2*0.75*20 = 300 Rs
+
+Bonus  :
+
+1. Upgrade the rider to a preferred rider if he has done in more than 10 rides.
+2. Preferred rider amount if no of seats >=2 : No of kilo * no of seats * 0.5 * amount per KM.
+3. Preferred rider amount if no of seats =1 : No of kilo * 0.75 * amount per KM.
+
+Functionalities Expected :
+
+1. Add Driver(name)
+2. Add Rider(name)
+3. Create a Ride(id,origin,destination,no of seats)
+4. Create/Update a Ride(id,origin,destination,no of seats)
+5. Withdraw ride(id)
+5. Close ride and return ride amount charged.
